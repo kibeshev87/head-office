@@ -1,0 +1,279 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "AvenirNextCyr-Medium";
+  src: url("assets/fonts/avenirnextcyr-medium.svg"); /* IE 9 Compatibility Mode */
+  src: url("assets/fonts/avenirnextcyr-medium.svg") format("embedded-opentype"), url("assets/fonts/avenirnextcyr-medium.svg") format("woff2"), url("assets/fonts/avenirnextcyr-medium.svg") format("woff"), url("assets/fonts/avenirnextcyr-medium.svg") format("truetype"), url("assets/fonts/avenirnextcyr-medium.svg") format("svg"); /* Chrome < 4, Legacy iOS */
+}
+.bodyWrapper {
+  font-family: "AvenirNextCyr-Medium", sans-serif;
+  font-style: normal;
+  margin: 0 auto;
+  border: 1px solid red;
+  max-width: 1170px;
+  line-height: 1.2;
+  color: #414140;
+}
+
+.breadcrumb_nav {
+  margin: 32px 0;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.breadcrumb .link_text {
+  text-decoration: none;
+  display: inline;
+  border-bottom: 1px solid #414140;
+  color: #414140;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.images {
+  max-width: 770px;
+}
+.images img {
+  margin-bottom: 24px;
+  width: 100%;
+  max-height: 434px;
+}
+.images img:last-child {
+  margin: 0;
+}
+
+.delivery,
+.btn {
+  margin-bottom: 24px;
+}
+
+.basket h1 {
+  line-height: 1.4;
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.delivery {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  height: 48px;
+  font-size: 14px;
+  background-color: #F5F7F9;
+}
+.delivery span {
+  font-weight: bold;
+}
+
+.btn {
+  width: 367px;
+  height: 56px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #FFDA00;
+  color: #414140;
+}
+.btn:hover {
+  background-color: #ffdf6c;
+}
+
+.selected_items_and_total_price .price_for_one_item {
+  display: flex;
+  justify-content: right;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #414140;
+  margin-top: 8px;
+  opacity: 0.6;
+}
+.selected_items_and_total_price .final_price_wrapper {
+  max-width: 352px;
+  height: 63px;
+  margin: 8px 0 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.selected_items_and_total_price .final_price_wrapper .final_price {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.selected_items_and_total_price .final_price_wrapper .final_price .final_price_text {
+  font-weight: 400;
+  font-size: 14px;
+}
+.selected_items_and_total_price .final_price_wrapper .final_price .kit_price {
+  font-weight: 700;
+  font-size: 28px;
+}
+.selected_items_and_total_price .final_price_wrapper a {
+  text-decoration: none;
+  max-width: 126px;
+}
+.selected_items_and_total_price .final_price_wrapper a .price_notice {
+  font-weight: 400;
+  font-size: 12px;
+  border-bottom: 1px solid #414140;
+  color: #414140;
+  opacity: 0.6;
+}
+
+.grey_colour {
+  background-color: #F5F7F9;
+}
+
+.basket_table {
+  width: 100%;
+  font-size: 14px;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: 1px solid #e6e6e8;
+}
+.basket_table .product_name {
+  font-weight: 400;
+  padding-left: 8px;
+}
+.basket_table .product_price {
+  font-weight: 700;
+}
+.basket_table tr {
+  height: 47px;
+}
+.basket_table tr td {
+  max-width: 170px;
+  padding: 0 11px 0;
+}
+.basket_table .first_cell {
+  max-width: 13px;
+}
+.basket_table .pyat {
+  border: 1px solid rgba(65, 65, 64, 0.1);
+  width: 36px;
+  height: 25px;
+  font-weight: 400;
+  font-size: 14px;
+  margin-left: 16px;
+  text-align: center;
+  color: #414140;
+  opacity: 0.6;
+}
+.basket_table .pyat::-webkit-inner-spin-button {
+  opacity: 1;
+}
+
+.contacts {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.call_us {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.phone_number {
+  margin-top: 8px;
+  font-weight: 700;
+  font-size: 24px;
+  border-bottom: 1px solid #414140;
+}
+
+.characteristics_and_description {
+  margin: 48px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.characteristics_and_description .characteristics_and_description_text {
+  font-weight: 700;
+  font-size: 24px;
+  color: #414140;
+  margin-bottom: 24px;
+}
+.characteristics_and_description .characteristics_and_description_table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.characteristics_and_description .characteristics {
+  width: 570px;
+}
+.characteristics_and_description .characteristics .characteristics_item td {
+  width: 285px;
+  height: 40px;
+  font-size: 14px;
+}
+.characteristics_and_description .characteristics .characteristics_item td:first-child {
+  font-weight: 400;
+  padding-left: 32px;
+}
+.characteristics_and_description .characteristics .characteristics_item td:last-child {
+  font-weight: 700;
+}
+.characteristics_and_description .description {
+  max-width: 570px;
+}
+.characteristics_and_description .description .description_text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  max-height: 254px;
+  overflow: hidden;
+  position: relative;
+}
+.characteristics_and_description .description .description_text .second_p {
+  margin-top: 15px;
+}
+.characteristics_and_description .description .description_text .button_read_full {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+  width: 100%;
+  height: 80px;
+  opacity: 1;
+  transition: 0.3s;
+}
+.characteristics_and_description .read_more_checker {
+  opacity: 0;
+  position: absolute;
+}
+.characteristics_and_description .read_more_button {
+  cursor: pointer;
+  display: inline-block;
+  padding-top: 5px;
+  border-bottom: 1px dashed #FFDA00;
+  color: #414140;
+}
+.characteristics_and_description .read_more_checker ~ .read_more_button:after {
+  content: "Читать полностью";
+}
+.characteristics_and_description .read_more_checker:checked ~ .read_more_button:after {
+  content: "Свернуть текст";
+}
+.characteristics_and_description .read_more_checker:checked ~ .description_text {
+  max-height: none;
+}
+.characteristics_and_description .read_more_checker:checked ~ .description_text .button_read_full {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+/*# sourceMappingURL=style.css.map */
