@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="style.css">
 
     <title>Карточка кабинета руководителя</title>
+
+    <script src="priceTable.js"></script>
+
 </head>
 
 <body class="bodyWrapper">
@@ -62,13 +65,16 @@
                     </td>
                     <td class="third_cell">
                         <span class="product_price">от 27 900 руб</span>
-                        <input class="pyat"
+                        <label for="td1"></label>
+                        <input id="td1"
+                               class="pyat"
                                type="number"
                                step="1"
                                min="1"
                                max="100"
-                               value="0"
-                               name="count"/>
+                               value="1"
+                               name="count"
+                               onclick="fullSum()"/>
                     </td>
                 </tr>
 
@@ -81,14 +87,17 @@
                     </td>
 
                     <td class="third_cell">
-                        <span class="product_price">от 27 900 руб</span>
-                        <input class="pyat"
+                        <span class="product_price">от 14 600 руб</span>
+                        <label for="td2"></label>
+                        <input id="td2"
+                               class="pyat"
                                type="number"
                                step="1"
                                min="1"
                                max="100"
                                value="1"
-                               name="count"/>
+                               name="count"
+                               onclick="fullSum()"/>
                     </td>
                 </tr>
 
@@ -100,14 +109,18 @@
                         <span class="product_name">Тумба с ящиками</span>
                     </td>
                     <td class="third_cell">
-                        <span class="product_price">от 27 900 руб</span>
-                        <input class="pyat"
+                        <span class="product_price">от 10 500 руб</span>
+                        <label for="td3"></label>
+                        <input id="td3"
+                               class="pyat"
                                type="number"
                                step="1"
                                min="1"
                                max="100"
                                value="1"
-                               name="count"/>
+                               name="count"
+                               onclick="fullSum()"
+                        />
                     </td>
                 </tr>
 
@@ -119,14 +132,17 @@
                         <span class="product_name">Шкаф для одежды</span>
                     </td>
                     <td class="third_cell">
-                        <span class="product_price">от 27 900 руб</span>
-                        <input class="pyat"
+                        <span class="product_price">от 55 000 руб</span>
+                        <label for="td4"></label>
+                        <input id="td4"
+                               class="pyat"
                                type="number"
                                step="1"
                                min="1"
                                max="100"
                                value="1"
-                               name="count"/>
+                               name="count"
+                               onclick="fullSum()"/>
                     </td>
                 </tr>
 
@@ -138,14 +154,17 @@
                         <span class="product_name">Кресло руководителя</span>
                     </td>
                     <td class="third_cell">
-                        <span class="product_price">от 27 900 руб</span>
-                        <input class="pyat"
+                        <span class="product_price">от 43 800 руб</span>
+                        <label for="td5"></label>
+                        <input id="td5"
+                               class="pyat"
                                type="number"
                                step="1"
                                min="1"
                                max="100"
                                value="1"
-                               name="count"/>
+                               name="count"
+                               onclick="fullSum()"/>
                     </td>
                 </tr>
 
@@ -157,14 +176,17 @@
                         <span class="product_name">Кресло посетителя</span>
                     </td>
                     <td class="third_cell">
-                        <span class="product_price">от 27 900 руб</span>
-                        <input class="pyat"
+                        <span class="product_price">от 13 500 руб</span>
+                        <label for="td6"></label>
+                        <input id="td6"
+                               class="pyat"
                                type="number"
                                step="1"
                                min="1"
                                max="100"
                                value="1"
-                               name="count"/>
+                               name="count"
+                               onclick="fullSum()"/>
                     </td>
                 </tr>
 
@@ -175,7 +197,7 @@
             <div class="final_price_wrapper">
                 <div class="final_price">
                     <span class="final_price_text">Цена за комплект от<br></span>
-                    <span class="kit_price"> 1 258 400 руб</span>
+                    <span id="kit_price" class="kit_price">165 300 руб</span>
                 </div>
 
                 <a href="">
@@ -264,6 +286,14 @@
 
 
 </section>
+
+<!--<section>-->
+
+<!--    <div class="content"></div>-->
+
+<!--    <script src="priceTable.js"></script>-->
+
+<!--</section>-->
 
 </body>
 </html>
