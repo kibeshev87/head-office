@@ -17,24 +17,35 @@
 $opacity: 0.6;
 $colorFonts: #414140;
 
-
-.bodyWrapper {
+html,
+body {
+  height: 100%;
   font-family: 'AvenirNextCyr-Medium', sans-serif;
-  font-style: normal;
-  margin: 0 auto;
-  //border: 1px solid red;
-  max-width: 1170px;
-  line-height: 1.2;
   color: $colorFonts;
+  font-style: normal;
+  line-height: 1.2;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+}
+
+._container {
+  max-width: 1205px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .breadcrumb_nav {
   margin: 32px 0;
 }
 
-
 .breadcrumb {
-  //border: 1px solid green;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -47,14 +58,13 @@ $colorFonts: #414140;
   }
 }
 
-.content {
+.img-and-basket-content {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 
 .images {
-  //border: 1px solid blueviolet;
   max-width: 770px;
 
   img {
@@ -113,7 +123,6 @@ $colorFonts: #414140;
 }
 
 .selected_items_and_total_price {
-  //border: 1px solid chocolate;
 
   .price_for_one_item {
     display: flex;
@@ -129,7 +138,6 @@ $colorFonts: #414140;
   .final_price_wrapper {
     max-width: 352px;
     height: 63px;
-    //border: 1px solid blueviolet;
     margin: 8px 0 24px 0;
     display: flex;
     justify-content: space-between;
@@ -151,11 +159,9 @@ $colorFonts: #414140;
       }
     }
 
-
     a {
       text-decoration: none;
       max-width: 126px;
-
 
       .price_notice {
         font-weight: 400;
@@ -190,8 +196,6 @@ $colorFonts: #414140;
 
   tr {
     height: 47px;
-    //border: 1px solid black;
-
 
     td {
       max-width: 170px;
@@ -214,7 +218,6 @@ $colorFonts: #414140;
     font-weight: 400;
     font-size: 14px;
     margin-left: 16px;
-
     text-align: center;
     color: $colorFonts;
     opacity: $opacity;
@@ -268,7 +271,6 @@ $colorFonts: #414140;
 
 
   .characteristics {
-    //border: 1px solid green;
     width: 570px;
 
     .characteristics_item td {
@@ -288,7 +290,6 @@ $colorFonts: #414140;
   }
 
   .description {
-    //border: 1px solid red;
     max-width: 570px;
 
     .description_text {
@@ -344,8 +345,141 @@ $colorFonts: #414140;
     opacity: 0;
     transition: .3s;
   }
+}
+
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.8s ease 0s; // анимация c замедлением появления popup
+
+  /*
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+  &:target .popup__content { // анимация с выездом сверху popup
+    transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+    //transform: translate(0px, 0px); // анимация с выездом сверху popup
+    opacity: 1;
+  }
+  // для анимации бех js
+  */
+}
+
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup.open .popup__content { // анимация с выездом сверху popup
+  transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+  //transform: translate(0px, 0px); // анимация с выездом сверху popup
+  opacity: 1;
+}
+
+.popup__area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.popup__body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+}
+
+.popup__content {
+  background-color: #FFFFFF;
+  //color: $colorFonts;
+  max-width: 370px;
+  max-height: 390px;
+  padding: 32px 32px 32px 25px;
+  position: relative;
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+  //transform: translate(0px, -100%); // анимация popup с выездом сверху
+  transform: perspective(600px) translate(0px, -100%) rotateX(45deg); // анимация с выездом с разворотом
+}
+
+.popup__close img {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.popup__title {
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 4px;
 
 }
+
+.popup__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  word-spacing: 4px;
+  margin-bottom: 24px;
+}
+
+.form__group {
+  border: 1px solid rgba(65, 65, 64, 0.1);
+  max-width: 100%;
+  height: 44px;
+  display: flex;
+  align-items: center;
+
+  .art-stranger {
+    border: none;
+    font-family: 'Avenir Next Cyr', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    outline: none;
+  }
+}
+
+.form__group img {
+  width: 18px;
+  border-radius: 100%;
+  margin: 15px;
+  border: 1px solid rgba(65, 65, 64, 0.1);
+}
+
+.btn__popup {
+  max-width: 100%;
+  margin: 12px 0 18px;
+}
+
+.footer__popup {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 150%;
+  opacity: 0.5;
+
+  .footer__popup-border {
+    border-bottom: 1px solid $colorFonts;
+  }
+}
+
+
+
 
 
 
