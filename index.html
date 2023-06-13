@@ -16,76 +16,60 @@
     <div class="content">
         <div class="content__container _container">
 
-            <section>
-                <nav class="breadcrumb_nav">
-                    <div class="breadcrumb">
-                        <a href="" class="link_text">Главная</a>
-                        <img src="assets/images/small_icons/arrow_bread.svg" alt="">
-                        <a href="" class="link_text">Кабинеты для руководителей</a>
-                        <img src="assets/images/small_icons/arrow_bread.svg" alt="">
-                        <span>Кабинет для руководителя GAMMA DIRECT</span>
-                    </div>
-                </nav>
-            </section>
+            <nav class="breadcrumbs">
+                <div class="breadcrumbs__content">
+                    <a href="" class="breadcrumbs__link-text">Главная</a>
+                    <img src="assets/images/small_icons/arrow_bread.svg" alt="">
+                    <a href="" class="breadcrumbs__link-text">Кабинеты для руководителей</a>
+                    <img src="assets/images/small_icons/arrow_bread.svg" alt="">
+                    <span>Кабинет для руководителя GAMMA DIRECT</span>
+                </div>
+            </nav>
 
-            <section class="img-and-basket-content">
+            <div class="img-and-basket__content">
+
                 <div class="images">
-                    <img src="assets/images/photo/photo1.png" alt="">
-                    <img src="assets/images/photo/video.png" alt="">
-                    <img src="assets/images/photo/photo2.png" alt="">
-                    <img src="assets/images/photo/photo3.png" alt="">
+                    <img src="assets/images/photo/photo1.png" alt="photo1">
+                    <img src="assets/images/photo/video.png" alt="video">
+                    <img src="assets/images/photo/photo2.png" alt="photo2">
+                    <img src="assets/images/photo/photo3.png" alt="photo3">
                 </div>
 
                 <div class="basket">
                     <h1>GAMMA DIRECT</h1>
 
-                    <div class="delivery">
-                        <img src="assets/images/small_icons/cart_img.svg" alt="">
-                        <p><span>Доставка и монтаж</span> Завтра после 12:00</p>
+                    <div class="basket__delivery">
+                        <div class="basket__delivery_item-1">
+                            <img src="assets/images/small_icons/cart_img.svg" alt="">
+                        </div>
+                        <div class="basket__delivery_item-2">
+                            <span class="basket__delivery_delivery-and-installation">Доставка и монтаж</span>
+                        </div>
+                        <div class="basket__delivery_item-3">
+                            <span class="basket__delivery_time">Завтра после 12:00</span>
+                        </div>
                     </div>
 
                     <a href="#popup" class="popup-link">
                         <button class="btn">Заказать бесплатный эскиз</button>
                     </a>
 
-                    <div class="selected_items_and_total_price">
 
-                        <table class="basket_table">
+                    <div class="table-product__wrapper">
+
+                        <table class="table-product__content">
                             <tr>
-                                <td class="first_cell">
+                                <td class="table__item-number">
                                     <img src="assets/images/small_icons/circle-1.svg" alt="1">
                                 </td>
-                                <td class="second cell">
-                                    <span class="product_name">Стол руководителя</span>
+                                <td>
+                                    <span class="table__product-name">Стол руководителя</span>
                                 </td>
-                                <td class="third_cell">
-                                    <span class="product_price">от 27 900 руб</span>
+                                <td class="table__product-price">
+                                    <span class="table__product-price_price">от 27 900 руб</span>
                                     <label for="td1"></label>
                                     <input id="td1"
-                                           class="pyat"
-                                           type="number"
-                                           step="1"
-                                           min="1"
-                                           max="100"
-                                           value="1"
-                                           name="count"
-                                           onclick="fullSum()"/>
-                                </td>
-                            </tr>
-
-                            <tr class="grey_colour">
-                                <td class="first_cell grey_colour">
-                                    <img src="assets/images/small_icons/circle-2.svg" alt="2">
-                                </td>
-                                <td class="second cell">
-                                    <span class="product_name">Брифинг-приставка</span>
-                                </td>
-
-                                <td class="third_cell">
-                                    <span class="product_price">от 14 600 руб</span>
-                                    <label for="td2"></label>
-                                    <input id="td2"
-                                           class="pyat"
+                                           class="table__input-number"
                                            type="number"
                                            step="1"
                                            min="1"
@@ -97,17 +81,40 @@
                             </tr>
 
                             <tr>
-                                <td class="first_cell">
+                                <td class="table__item-number">
+                                    <img src="assets/images/small_icons/circle-2.svg" alt="2">
+                                </td>
+                                <td>
+                                    <span class="table__product-name">Брифинг-приставка</span>
+                                </td>
+
+                                <td class="table__product-price">
+                                    <span class="table__product-price_price">от 14 600 руб</span>
+                                    <label for="td2"></label>
+                                    <input id="td2"
+                                           class="table__input-number"
+                                           type="number"
+                                           step="1"
+                                           min="1"
+                                           max="100"
+                                           value="1"
+                                           name="count"
+                                           onclick="fullSum()"/>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="table__item-number">
                                     <img src="assets/images/small_icons/circle-3.svg" alt="3">
                                 </td>
-                                <td class="second cell">
-                                    <span class="product_name">Тумба с ящиками</span>
+                                <td>
+                                    <span class="table__product-name">Тумба с ящиками</span>
                                 </td>
-                                <td class="third_cell">
-                                    <span class="product_price">от 10 500 руб</span>
+                                <td class="table__product-price">
+                                    <span class="table__product-price_price">от 10 500 руб</span>
                                     <label for="td3"></label>
                                     <input id="td3"
-                                           class="pyat"
+                                           class="table__input-number"
                                            type="number"
                                            step="1"
                                            min="1"
@@ -119,18 +126,18 @@
                                 </td>
                             </tr>
 
-                            <tr class="grey_colour">
-                                <td class="first_cell grey_colour">
+                            <tr>
+                                <td class="table__item-number">
                                     <img src="assets/images/small_icons/circle-4.svg" alt="4">
                                 </td>
-                                <td class="second cell">
-                                    <span class="product_name">Шкаф для одежды</span>
+                                <td>
+                                    <span class="table__product-name">Шкаф для одежды</span>
                                 </td>
-                                <td class="third_cell">
-                                    <span class="product_price">от 55 000 руб</span>
+                                <td class="table__product-price">
+                                    <span class="table__product-price_price">от 55 000 руб</span>
                                     <label for="td4"></label>
                                     <input id="td4"
-                                           class="pyat"
+                                           class="table__input-number"
                                            type="number"
                                            step="1"
                                            min="1"
@@ -142,17 +149,17 @@
                             </tr>
 
                             <tr>
-                                <td class="first_cell">
+                                <td class="table__item-number">
                                     <img src="assets/images/small_icons/circle-5.svg" alt="5">
                                 </td>
-                                <td class="second cell">
-                                    <span class="product_name">Кресло руководителя</span>
+                                <td>
+                                    <span class="table__product-name">Кресло руководителя</span>
                                 </td>
-                                <td class="third_cell">
-                                    <span class="product_price">от 43 800 руб</span>
+                                <td class="table__product-price">
+                                    <span class="table__product-price_price">от 43 800 руб</span>
                                     <label for="td5"></label>
                                     <input id="td5"
-                                           class="pyat"
+                                           class="table__input-number"
                                            type="number"
                                            step="1"
                                            min="1"
@@ -163,18 +170,18 @@
                                 </td>
                             </tr>
 
-                            <tr class="grey_colour">
-                                <td class="first_cell ">
+                            <tr>
+                                <td class="table__item-number">
                                     <img src="assets/images/small_icons/circle-6.svg" alt="6">
                                 </td>
-                                <td class="second cell">
-                                    <span class="product_name">Кресло посетителя</span>
+                                <td>
+                                    <span class="table__product-name">Кресло посетителя</span>
                                 </td>
-                                <td class="third_cell">
-                                    <span class="product_price">от 13 500 руб</span>
+                                <td class="table__product-price">
+                                    <span class="table__product-price_price">от 13 500 руб</span>
                                     <label for="td6"></label>
                                     <input id="td6"
-                                           class="pyat"
+                                           class="table__input-number"
                                            type="number"
                                            step="1"
                                            min="1"
@@ -184,18 +191,17 @@
                                            onclick="fullSum()"/>
                                 </td>
                             </tr>
-
                         </table>
 
-                        <span class="price_for_one_item">*Цены указаны за 1 шт</span>
+                        <span class="price-for-one-item-text">*Цены указаны за 1 шт</span>
 
-                        <div class="final_price_wrapper">
-                            <div class="final_price">
-                                <span class="final_price_text">Цена за комплект от<br></span>
-                                <span id="kit_price" class="kit_price">165 300 руб</span>
+                        <div class="final-price">
+                            <div class="final-price__content">
+                                <span class="final-price__content_text">Цена за комплект от<br></span>
+                                <span id="kit-price" class="final-price__content_kit-price">165 300 руб</span>
                             </div>
 
-                            <a href="#">
+                            <a href="#" class="final-price__link">
                                 <span class="price_notice">Уведомить, если цена будет снижена</span>
                             </a>
                         </div>
@@ -211,41 +217,40 @@
                             <img src="assets/images/small_icons/question_img.svg" alt="">
                         </div>
                         <div>
-                            <span class="call_us">Возникли вопросы? Звоните!</span>
-                            <div class="phone_number">+7 (938) 5000-541</div>
+                            <span class="contacts__call-us">Возникли вопросы? Звоните!</span>
+                            <div class="contacts__phone-number">+7 (938) 5000-541</div>
                         </div>
                     </div>
                 </div>
 
-            </section>
+            </div>
 
-            <section class="characteristics_and_description">
+            <div class="characteristics-and-description">
+                <div class="characteristics-and-description__characteristics">
+                    <div class="characteristics-and-description__title">Характеристики</div>
+                    <table class="characteristics-table">
 
-                <div class="characteristics">
-                    <div class="characteristics_and_description_text">Характеристики</div>
-                    <table class="characteristics_and_description_table">
-
-                        <tr class="characteristics_item">
+                        <tr class="characteristics-table__item">
                             <td>Материал</td>
                             <td>МДФ</td>
                         </tr>
-                        <tr class="characteristics_item grey_colour">
+                        <tr class="characteristics-table__item">
                             <td>Страна производитель</td>
                             <td>Россия</td>
                         </tr>
-                        <tr class="characteristics_item">
+                        <tr class="characteristics-table__item">
                             <td>Толщина столешницы</td>
                             <td>25 мм</td>
                         </tr>
-                        <tr class="characteristics_item grey_colour">
+                        <tr class="characteristics-table__item">
                             <td>Стиль</td>
                             <td>Современный</td>
                         </tr>
-                        <tr class="characteristics_item">
+                        <tr class="characteristics-table__item">
                             <td>Цвет</td>
                             <td>Орех</td>
                         </tr>
-                        <tr class="characteristics_item grey_colour">
+                        <tr class="characteristics-table__item">
                             <td>Здесь могут быть</td>
                             <td>любые характеристики</td>
                         </tr>
@@ -253,10 +258,10 @@
                     </table>
                 </div>
 
-                <div class="description">
-                    <div class="characteristics_and_description_text">Описание</div>
-                    <input type="checkbox" class="read_more_checker" id="read_more_checker">
-                    <div class="description_text">
+                <div class="characteristics-and-description__description">
+                    <div class="characteristics-and-description__title">Описание</div>
+                    <input type="checkbox" class="read-more-checker" id="read-more-checker">
+                    <div class="description-text">
                         <p>
                             Мебель для кабинета руководителя «On.Top» создана специально для ценителей
                             основательного подхода к бизнесу.
@@ -266,9 +271,11 @@
                             призвано
                             подчеркнуть респектабельность обладателя кабинета.
                         </p>
-                        <p class="second_p">
+                        <br>
+                        <p>
                             Классический дизайн позволяет интегрировать кабинет
-                            «On.Top» практически в любой офисный интерьер. Двойная столешница, выполненная в сочетании
+                            «On.Top» практически в любой офисный интерьер. Двойная столешница, выполненная в
+                            сочетании
                             благородных
                             цветов «Рэд Фокс» и «венге», поддержана таким же исполнением шкафа, что придаёт кабинету
                             гармоничный
@@ -276,16 +283,18 @@
                             основательный вид. Модельный ряд позволяет максимально учесть индивидуальные требования
                             руководителя
                             и
-                            подчеркнуть его статус. Округлые элементы стола и фурнитуры придают кабинету эргономичность.
+                            подчеркнуть его статус. Округлые элементы стола и фурнитуры придают кабинету
+                            эргономичность.
                             Модельный
                             ряд
                             также предполагает оснащение мебелью конференц-залов и переговорных комнат.
                         </p>
+                        <div class="bottom"></div>
                     </div>
-                    <label for="read_more_checker" class="read_more_button"></label>
+                    <label for="read-more-checker" class="read-more-button"></label>
 
                 </div>
-            </section>
+            </div>
         </div>
     </div>
 </div>

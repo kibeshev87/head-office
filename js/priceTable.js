@@ -13,7 +13,7 @@ const fullSum = () => {
     let kitPrice5 = line5.value * 43800
     let kitPrice6 = line6.value * 13500
 
-    document.getElementById('kit_price')
+    document.getElementById('kit-price')
         .innerHTML = (kitPrice1 + kitPrice2 + kitPrice3 + kitPrice4 + kitPrice5 + kitPrice6)
         .toLocaleString('ru-Ru') + ' руб'
 }
